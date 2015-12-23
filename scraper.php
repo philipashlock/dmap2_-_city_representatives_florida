@@ -9,7 +9,7 @@ if (empty($_SERVER["SERVER_ADDR"]) OR stripos($_SERVER["SERVER_ADDR"], '127.0.0.
 }
 
 class scraperwiki {
-	protected $db;public function __construct($db = 'sqlite:scraperwiki.sqlite') {scraperwiki::_connect($db);}static function _connect($db = null) {if (empty($db)) {R::setup();} else {R::setup($db);}}static function save($unique_keys = array(), $data, $table_name = "swdata", $date = null) {
+	protected $db;public function __construct($db = 'sqlite:scraperwiki.sqlite') {scraperwiki::_connect($db);}static function _connect($db = null) {if (empty($db)) {R::setup();} else {R::setup($db);}}static function save($unique_keys = array(), $data, $table_name = "data", $date = null) {
 		$ldata = $data;if (!is_null($date)) {
 			$ldata["date"] = $date;
 		}
